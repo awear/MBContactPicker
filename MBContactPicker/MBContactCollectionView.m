@@ -542,7 +542,12 @@ typedef NS_ENUM(NSInteger, ContactCollectionViewSection) {
         }
         return YES;
     }
-    
+
+    if ([self.contactDelegate respondsToSelector:@selector(contactCollectionViewShouldAddContact:)])
+    {
+        return [self.contactDelegate contactCollectionViewShouldAddContact:self];
+    }
+
     return YES;
 }
 

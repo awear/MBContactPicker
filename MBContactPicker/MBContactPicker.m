@@ -271,6 +271,14 @@ CGFloat const kAnimationSpeed = .25;
 
 #pragma mark - ContactCollectionViewDelegate
 
+- (BOOL)contactCollectionViewShouldAddContact:(MBContactCollectionView*)contactCollectionView
+{
+    if ([self.delegate respondsToSelector:@selector(contactCollectionViewShouldAddContact:)]) {
+        return [self.delegate contactCollectionViewShouldAddContact:contactCollectionView];
+    }
+    return YES;
+}
+
 - (void)contactCollectionView:(MBContactCollectionView*)contactCollectionView willChangeContentSizeTo:(CGSize)newSize
 {
     if (!CGSizeEqualToSize(self.contactCollectionViewContentSize, newSize))

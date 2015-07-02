@@ -18,6 +18,7 @@
 
 @optional
 
+- (BOOL)contactCollectionViewShouldAddContact:(MBContactCollectionView*)contactCollectionView;
 - (void)contactCollectionView:(MBContactCollectionView*)contactCollectionView willChangeContentSizeTo:(CGSize)newSize;
 - (void)contactCollectionView:(MBContactCollectionView*)contactCollectionView entryTextDidChange:(NSString*)text;
 - (void)contactCollectionView:(MBContactCollectionView*)contactCollectionView didEnterCustomContact:(NSString*)text;
