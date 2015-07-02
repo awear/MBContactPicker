@@ -11,7 +11,7 @@
 #import "MBContactCollectionViewPromptCell.h"
 #import "MBContactCollectionViewFlowLayout.h"
 
-NSInteger const kCellHeight = 31;
+NSInteger const kCellHeight = 40;
 NSString * const kPrompt = @"To:";
 NSString * const kDefaultEntryText = @"";
 
@@ -538,8 +538,9 @@ typedef NS_ENUM(NSInteger, ContactCollectionViewSection) {
                                                scrollPosition:UICollectionViewScrollPositionBottom];
             [self.delegate collectionView:self didSelectItemAtIndexPath:newSelectedIndexPath];
             [self becomeFirstResponder];
+            return NO;
         }
-        return NO;
+        return YES;
     }
     
     return YES;
