@@ -13,7 +13,7 @@
 
 NSInteger const kCellHeight = 31;
 NSString * const kPrompt = @"To:";
-NSString * const kDefaultEntryText = @" ";
+NSString * const kDefaultEntryText = @"";
 
 @interface MBContactCollectionView() <UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegateImproved, MBContactCollectionViewDelegateFlowLayout, UIKeyInput>
 

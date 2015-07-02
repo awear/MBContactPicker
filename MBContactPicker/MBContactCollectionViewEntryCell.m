@@ -48,7 +48,8 @@
 {
     UITextField *textField = [[UITextField alloc] initWithFrame:self.bounds];
     textField.delegate = self.delegate;
-    textField.text = @" ";
+    textField.placeholder = @"Enter name";
+    textField.text = @"";
     textField.autocorrectionType = UITextAutocorrectionTypeNo;
     UIFont *font = [[self.class appearance] font];
     textField.tintColor = [[self.class appearance] tintColor];
